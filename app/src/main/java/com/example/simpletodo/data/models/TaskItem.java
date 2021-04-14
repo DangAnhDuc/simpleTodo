@@ -26,15 +26,8 @@ public class TaskItem {
     @ColumnInfo(name = "Completed")
     public Boolean isCompleted;
 
-    @SuppressWarnings("unused")
     public TaskItem() {
         super();
-    }
-
-
-    public TaskItem(String title) {
-        super();
-        this.title = title;
     }
 
     public void setCompleted(Boolean completed) {

@@ -54,6 +54,10 @@ public class TaskDetailActivity extends AppCompatActivity {
         if (!isNewTask) {
             fetchTaskById(task_id);
             binding.btnDelete.setVisibility(View.VISIBLE);
+            binding.btnResetData.setVisibility(View.GONE);
+        } else {
+            binding.btnDelete.setVisibility(View.GONE);
+            binding.btnResetData.setVisibility(View.VISIBLE);
         }
 
         binding.btnDone.setOnClickListener(v -> {
@@ -80,6 +84,12 @@ public class TaskDetailActivity extends AppCompatActivity {
         binding.btnDelete.setOnClickListener(v -> deleteTask(updateTaskItem));
         binding.btnCancel.setOnClickListener(v -> finish());
         binding.btnDueDate.setOnClickListener(v -> showDatePickerDialog());
+        binding.btnResetData.setOnClickListener(v -> {
+            binding.inTitle.getText().clear();
+            binding.inDescription.getText().clear();
+            binding.inDisplayDate.getText().clear();
+
+        });
     }
 
     private void showDatePickerDialog() {

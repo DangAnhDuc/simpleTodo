@@ -8,4 +8,5 @@
     <string name="title">Title</string>
     <string name="date_not_set">Date not set</string>
     <string name="click_to_set_due_date">Click to set due date</string>
+    <string name="reset_data">Reset Data</string>
 </resources>
