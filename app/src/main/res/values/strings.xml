@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">SimpleToDo</string>
     <string name="generic_num">#%s</string>
+    <string name="cancel">Cancel</string>
+    <string name="done">DONE</string>
+    <string name="delete">DELETE</string>
+    <string name="description">Description</string>
+    <string name="title">Title</string>
+    <string name="date_not_set">Date not set</string>
+    <string name="click_to_set_due_date">Click to set due date</string>
 </resources>

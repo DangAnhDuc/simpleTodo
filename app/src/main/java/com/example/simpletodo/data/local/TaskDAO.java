@@ -10,7 +10,6 @@ import com.example.simpletodo.data.models.TaskItem;
 
 import java.util.List;
 
-import static com.example.simpletodo.util.Constant.DB_NAME;
 import static com.example.simpletodo.util.Constant.TABLE_NAME_TASK;
 
 @Dao
@@ -20,17 +19,14 @@ public interface TaskDAO {
     List<TaskItem> fetchAllTaskItem();
 
     @Query("SELECT * FROM " + TABLE_NAME_TASK + " WHERE taskId = :taskId")
-    TaskItem fetchTodoListById(int taskId);
+    TaskItem fetchTaskItemListById(int taskId);
 
     @Insert
-    void insertTaskItem(TaskItem taskItem);
-
-    @Insert
-    void insertTaskItemList(List<TaskItem> todoList);
+    Long insertTaskItem(TaskItem taskItem);
 
     @Update
-    int updateTodo(TaskItem taskItem);
+    int updateTaskItem(TaskItem taskItem);
 
     @Delete
-    int deleteTodo(TaskItem taskItem);
+    int deleteTaskItem(TaskItem taskItem);
 }

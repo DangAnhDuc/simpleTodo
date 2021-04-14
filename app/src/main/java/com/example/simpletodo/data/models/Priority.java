@@ -2,10 +2,8 @@ package com.example.simpletodo.data.models;
 
 import android.graphics.Color;
 
-import com.example.simpletodo.MainActivity;
-
-public enum  Priority {
-    LOW("low", 2,Color.rgb(204, 214, 0)),
+public enum Priority {
+    LOW("low", 2, Color.rgb(204, 214, 0)),
     MEDIUM("medium", 1, Color.rgb(255, 170, 0)),
     HIGH("high", 0, Color.rgb(255, 0, 0));
 

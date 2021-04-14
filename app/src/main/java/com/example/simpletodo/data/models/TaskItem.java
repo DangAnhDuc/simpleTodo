@@ -4,9 +4,6 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.io.Serializable;
-import java.util.Date;
-
 @Entity(tableName = "task")
 public class TaskItem {
 
@@ -14,43 +11,33 @@ public class TaskItem {
     @ColumnInfo(name = "TaskId")
     public int taskId;
 
-    @ColumnInfo(name = "Subject")
-    public String subject;
+    @ColumnInfo(name = "Title")
+    public String title;
 
     @ColumnInfo(name = "Description")
     public String description;
 
-//    @ColumnInfo(name = "DueDate")
-//    public Date dueDate;
+    @ColumnInfo(name = "DueDate")
+    public String dueDate;
 
     @ColumnInfo(name = "Priority")
     public Priority priority;
 
+    @ColumnInfo(name = "Completed")
+    public Boolean isCompleted;
+
     @SuppressWarnings("unused")
-    public TaskItem(){
+    public TaskItem() {
         super();
     }
 
-    public TaskItem(String subject){
+
+    public TaskItem(String title) {
         super();
-        this.subject = subject;
+        this.title = title;
     }
 
-//    public int compareTo(TaskItem item) {
-//
-//        if(item.dueDate != null && this.dueDate == null) {
-//            return 1;
-//        }
-//        if(item.dueDate == null && this.dueDate != null) {
-//            return -1;
-//        }
-//
-//        if(item.dueDate != null && this.dueDate != null && item.dueDate.compareTo(this.dueDate) > 0) {
-//            return -1;
-//        } else if(item.dueDate != null && this.dueDate != null && item.dueDate.compareTo(this.dueDate) < 0) {
-//            return 1;
-//        } else {
-//            return this.priority.getValue() - item.priority.getValue();
-//        }
-//    }
+    public void setCompleted(Boolean completed) {
+        isCompleted = completed;
+    }
 }
